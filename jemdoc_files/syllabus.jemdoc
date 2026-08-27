@@ -66,6 +66,8 @@ Upon completion of the course, students will be able to:
 
 === Grading
 
+This course will be graded by letter grade based on the following point contributions.
+
 {{
 <table id="grading">
   <tr><td><b>Component</b></td><td><b>Weight</b></td></tr>
@@ -77,19 +79,6 @@ Upon completion of the course, students will be able to:
   <tr><td><b>Total</b></td><td><b>100%</b></td></tr>
 </table>
 }}
-
-==== Grade Descriptors
-
-~~~
-{}{table}{grade-descriptors}
-*Grade* | *Description* ||
-A | Comprehensive understanding of the advanced mathematical concepts relevant to AI; strong mathematical rigor and consistently insightful analysis; able to critically read and apply advanced machine learning research. ||
-A- | Solid understanding of key mathematical concepts for AI and successful application of matrix decomposition, Markov chains, stochastic gradient methods, and entropy. Minor errors do not detract from the overall grasp of advanced topics. ||
-B | Understanding of core concepts and correct application to standard AI problems, with limited depth when integrating or interpreting more abstract or unfamiliar extensions. ||
-C | Basic understanding of the main topics, with significant gaps in rigor, generalization, or application; able to perform routine computations but has difficulty with novel or complex problems. ||
-D | Minimal understanding of the core material and difficulty applying fundamental techniques or interpreting results correctly. ||
-F | Unsatisfactory performance on several learning outcomes or failure to meet specified assessment requirements.
-~~~
 
 === Reference Texts
 
