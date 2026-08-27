@@ -73,20 +73,20 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <th style="width:15%">Materials</th>
         <th style="width:15%">Homework</th>
     </tr>
-    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>9/14/2026</td><td><b>Matrix decomposition</b><ul><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>9/21/2026</td><td><b>Vector space and norm</b><ul><li>Basis, orthogonality, and vector norms</li><li>Applications in embeddings</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>10/5/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>10/12/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>10/19/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>10/26/2026</td><td><b>Midterm Exam</b></td><td></td><td>Details to be posted</td></tr>
-    <tr><td>11/2/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>11/9/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>11/16/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>11/23/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>11/30/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>12/7/2026</td><td><b>Cross-entropy</b><ul><li>Cross-entropy between probability distributions</li><li>Loss functions for classification tasks</li></ul></td><td></td><td>To be posted</td></tr>
-    <tr><td>12/14/2026</td><td><b>Final Exam</b></td><td></td><td>Details to be posted</td></tr>
+    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td></td><td></td></tr>
+    <tr><td>9/14/2026</td><td><b>Matrix decomposition</b><ul><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td></td><td></td></tr>
+    <tr><td>9/21/2026</td><td><b>Vector space and norm</b><ul><li>Basis, orthogonality, and vector norms</li><li>Applications in embeddings</li></ul></td><td></td><td></td></tr>
+    <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td></td><td></td></tr>
+    <tr><td>10/5/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td></td><td></td></tr>
+    <tr><td>10/12/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td></td><td></td></tr>
+    <tr><td>10/19/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td></td></tr>
+    <tr><td>10/26/2026</td><td><b>Midterm Exam</b></td><td></td><td></td></tr>
+    <tr><td>11/2/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/9/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/16/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/23/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/30/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td></td></tr>
+    <tr><td>12/7/2026</td><td><b>Cross-entropy</b><ul><li>Cross-entropy between probability distributions</li><li>Loss functions for classification tasks</li></ul></td><td></td><td></td></tr>
+    <tr><td>12/14/2026</td><td><b>Final Exam</b></td><td></td><td></td></tr>
 </table>
 }}
