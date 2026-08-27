@@ -1,0 +1,123 @@
+# jemdoc: menu{MENU}{syllabus.html},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css},addjs{http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min},addjs{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min}
+
+# == AIE6001(Fall 2026): Course Syllabus
+
+[index.html {{<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>}} Back to course homepage]
+
+=== Course Overview
+
+~~~
+{}{table}{course-information}
+*Course code* | AIE6001 ||
+*Course title* | Advanced Math for Artificial Intelligence ||
+*Chinese title* | 人工智能高等数学 ||
+*Units* | 3 ||
+*Instructional hours* | 3 hours per week
+~~~
+
+This course delves into the critical mathematical foundations essential for developing advanced artificial intelligence (AI) systems. It covers advanced mathematics topics that are crucial for modern AI, including linear algebra (e.g., matrix operations and singular value decomposition), probability theory (e.g., Markov chains), optimization theory (e.g., gradient descent and second-order methods), and information theory (e.g., entropy and KL divergence). The course is designed for students who already have a basic understanding of mathematics and want to enhance their skills for AI-driven applications.
+
+=== Prerequisites
+
+- Linear algebra
+- Proof-based advanced calculus or mathematical analysis
+- Calculus-based elementary probability and statistics
+- Elementary stochastic processes
+
+There are no co-requisites. Experience with Python is helpful, though not compulsory.
+
+=== Learning Outcomes
+
+Upon completion of the course, students will be able to:
+
+- Apply advanced linear algebra knowledge, including matrix decompositions and numerical linear algebra methods, to understand AI systems and analyze high-dimensional data.
+- Apply probability theory, including discrete and continuous-time Markov chains and stochastic differential equations, to understand stochastic processes and diffusion generative models.
+- Understand and implement optimization techniques, including stochastic gradient methods and approximation algorithms, to train machine learning models efficiently and understand the underlying theory.
+- Use information-theoretic measures, including entropy and KL divergence, to evaluate model performance, quantify uncertainty, and improve data compression and representation.
+- Develop the mathematical rigor needed to explore cutting-edge topics.
+- Understand machine learning research papers that rely on advanced mathematical frameworks.
+
+=== Course Content
+
+==== Linear Algebra for AI
+
+- *Matrix operations:* Matrix multiplication, inverses, determinants, and their role in neural networks.
+- *Matrix decomposition:* QR factorization, eigenvalue decomposition, SVD decomposition, and their applications in dimensionality reduction.
+- *Vector space and norm:* Basis, orthogonality, and their applications in embeddings.
+- *Basics of tensors:* Multidimensional arrays for deep learning.
+
+==== Probability Theory for AI
+
+- *Probability distributions and statistical inference:* Common probability distributions and their use in modeling data.
+- *Markov chains:* Transition matrices, stationary distributions, and their applications in PageRank.
+- *Stochastic processes:* Discrete and continuous-time Markov chains and their applications in diffusion models.
+
+==== Optimization Theory
+
+- *Gradient methods:* Stochastic gradient methods and their insights for training neural networks.
+- *Constrained optimization:* KKT conditions, duality, and their applications in support vector machines.
+- *Approximation algorithms:* Convex relaxation for non-convex machine learning problems.
+
+==== Information Theory
+
+- *Entropy and mutual information:* Measuring uncertainty and feature relevance.
+- *Comparing distributions:* KL divergence, Wasserstein distance, and kernel-based distances for quantifying discrepancies between probability distributions.
+- *Cross-entropy:* Loss functions for classification tasks.
+
+=== Grading
+
+{{
+<table id="grading">
+  <tr><td><b>Component</b></td><td><b>Weight</b></td></tr>
+  <tr><td>Assignments</td><td>40%</td></tr>
+  <tr><td>Midterm exam</td><td>20%</td></tr>
+  <tr><td>Final exam (written)</td><td>30%</td></tr>
+  <tr><td>Final exam (oral)</td><td>5%</td></tr>
+  <tr><td>Participation</td><td>5%</td></tr>
+  <tr><td><b>Total</b></td><td><b>100%</b></td></tr>
+</table>
+}}
+
+==== Grade Descriptors
+
+~~~
+{}{table}{grade-descriptors}
+*Grade* | *Description* ||
+A | Comprehensive understanding of the advanced mathematical concepts relevant to AI; strong mathematical rigor and consistently insightful analysis; able to critically read and apply advanced machine learning research. ||
+A- | Solid understanding of key mathematical concepts for AI and successful application of matrix decomposition, Markov chains, stochastic gradient methods, and entropy. Minor errors do not detract from the overall grasp of advanced topics. ||
+B | Understanding of core concepts and correct application to standard AI problems, with limited depth when integrating or interpreting more abstract or unfamiliar extensions. ||
+C | Basic understanding of the main topics, with significant gaps in rigor, generalization, or application; able to perform routine computations but has difficulty with novel or complex problems. ||
+D | Minimal understanding of the core material and difficulty applying fundamental techniques or interpreting results correctly. ||
+F | Unsatisfactory performance on several learning outcomes or failure to meet specified assessment requirements.
+~~~
+
+=== Reference Texts
+
+==== Required
+
+No required textbook.
+
+==== Recommended
+
+- Arora, Raman, et al. /Theory of Deep Learning/ (2020). [https://www.cs.princeton.edu/courses/archive/fall19/cos597B/lecnotes/bookdraft.pdf Available online].
+- Ma, Wing-Kin. /ENGG 5781: Matrix Analysis and Computations/. Department of Electronic Engineering, The Chinese University of Hong Kong. [https://www.ee.cuhk.edu.hk/~wkma/engg5781/ Course materials].
+- Hastie, Trevor, Robert Tibshirani, and Jerome Friedman. /The Elements of Statistical Learning/ (2009).
+- Casella, George, and Roger Berger. /Statistical Inference/. CRC Press, 2024.
+- Chewi, Sinho. /Log-Concave Sampling/ (2024). [https://chewisinho.github.io/main.pdf Available online].
+- Norris, James R. /Markov Chains/. Cambridge University Press, 1998.
+- Boyd, Stephen P., and Lieven Vandenberghe. /Convex Optimization/. Cambridge University Press, 2004.
+- Stanford University. /EE364b: Lecture Slides and Notes/. [https://stanford.edu/class/ee364b/lectures.html Course materials].
+- Cover, Thomas M. /Elements of Information Theory/. John Wiley & Sons, 1999.
+- Yeung, Raymond W. /Information Theory and Network Coding/. Springer, 2008.
+
+=== Evaluation and Feedback
+
+- Formal Course and Teaching Evaluation
+- Informal feedback to the instructor and teaching assistants
+- Departmental retreat and program review
+
+=== Academic Honesty and Use of AI
+
+Students must complete all coursework and assessments independently unless AI-tool use is explicitly permitted. Unauthorized use of AI may constitute academic dishonesty and harm learning. Misuse includes submitting AI-generated work as one's own, using AI to cheat, or employing AI unethically. Students must obtain permission before using AI in academic work and acknowledge any permitted AI use in their submissions.
+
+[index.html {{<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>}} Back to course homepage]

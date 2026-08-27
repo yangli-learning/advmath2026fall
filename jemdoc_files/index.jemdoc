@@ -1,0 +1,92 @@
+# jemdoc: menu{MENU}{index.html},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css},addjs{http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min},addjs{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min}
+
+# == AIE6001(Fall 2026): Advanced Math for AI
+
+
+Welcome to the class website of */AIE6001(Fall 2026): Advanced Math for AI/* at *The Chinese University of Hong Kong*!
+
+Our class meets every *Monday morning, 9:00-11:30am*. The class location is *TBA*.
+
+For complete course policies, learning outcomes, grading, and reference texts, see the [syllabus.html Course Syllabus].
+
+
+~~~
+{Announcement}
+- *Reminder*: The first class will be held on Monday, September 7th.
+~~~
+
+
+{{
+<div id="text-img-container"><div id="img-container">
+<img src="images/gd.png" alt="Visualization of numerical optimization" width="80%" />
+<p style="margin-top:8px; text-align:center; font-size:0.9em;">Image courtesy of <a href="https://www.benfrederickson.com/numerical-optimization/" target="blank">Ben Frederickson</a>.</p>
+</div><div id="text-container"></div></div>
+}}
+
+=== Course Overview
+This course delves into the critical mathematical foundations essential for developing advanced artificial intelligence (AI) systems. It covers advanced mathematics topics that are crucial for modern AI, such as linear algebra (e.g., matrix operations and singular value decomposition), probability theory (e.g., Markov chains), optimization theory (e.g., gradient descent and second-order methods), and information theory (e.g., entropy and KL divergence). This course is designed for students who already have a basic understanding of mathematics and want to enhance their skills for AI-driven applications.
+
+/This course is one of two sessions of AIE6001. The course materials are based on those developed by [https://walterbabyrudin.github.io/course.html Prof. Jie Wang]./
+
+==== Prerequisites
+Students should be comfortable with introductory calculus, linear algebra, and probability. Prior exposure to machine learning is helpful but not required. Mathematical maturity and a willingness to work through derivations are expected.
+
+
+=== Team
+
+{{
+<div id="member-container">
+    <div id="member">
+        <img src="images/people/yang.jpeg">
+        <p>
+            <b>Yang Li</b></br>
+            Instructor</br>
+            Email TBA
+        </p>
+    </div>
+    <div id="member">
+        <img src="images/people/p1.png">
+        <p>
+            <b>Teaching Assistant 1</b></br>
+            TA</br>
+            Details TBA
+        </p>
+    </div>
+    <div id="member">
+        <img src="images/people/p2.png">
+        <p>
+            <b>Teaching Assistant 2</b></br>
+            TA</br>
+            Details TBA
+        </p>
+    </div>
+</div>
+}}
+
+
+=== Schedule
+{{
+<table class="table table-striped" id="schedule">
+    <tr>
+        <th>Date</th>
+        <th>Topic and Detailed Content</th>
+        <th style="width:15%">Materials</th>
+        <th style="width:15%">Homework</th>
+    </tr>
+    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>9/14/2026</td><td><b>Matrix decomposition</b><ul><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>9/21/2026</td><td><b>Vector space and norm</b><ul><li>Basis, orthogonality, and vector norms</li><li>Applications in embeddings</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>10/5/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>10/12/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>10/19/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>10/26/2026</td><td><b>Midterm Exam</b></td><td></td><td>Details to be posted</td></tr>
+    <tr><td>11/2/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>11/9/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>11/16/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>11/23/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>11/30/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>12/7/2026</td><td><b>Cross-entropy</b><ul><li>Cross-entropy between probability distributions</li><li>Loss functions for classification tasks</li></ul></td><td></td><td>To be posted</td></tr>
+    <tr><td>12/14/2026</td><td><b>Final Exam</b></td><td></td><td>Details to be posted</td></tr>
+</table>
+}}
