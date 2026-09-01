@@ -4,6 +4,8 @@
 
 [index.html {{<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>}} Back to course homepage]
 
+Download the official course syllabus: [syllabus_AIE6001_Fall2026.docx syllabus_AIE6001_Fall2026.docx].
+
 === Course Overview
 
 ~~~
@@ -72,9 +74,8 @@ This course will be graded by letter grade based on the following point contribu
 <table id="grading">
   <tr><td><b>Component</b></td><td><b>Weight</b></td></tr>
   <tr><td>Assignments</td><td>40%</td></tr>
-  <tr><td>Midterm exam</td><td>20%</td></tr>
-  <tr><td>Final exam (written)</td><td>30%</td></tr>
-  <tr><td>Final exam (oral)</td><td>5%</td></tr>
+  <tr><td>Midterm exam</td><td>25%</td></tr>
+  <tr><td>Final exam</td><td>30%</td></tr>
   <tr><td>Participation</td><td>5%</td></tr>
   <tr><td><b>Total</b></td><td><b>100%</b></td></tr>
 </table>
@@ -110,6 +111,6 @@ The main study materials for this course will be the lecture slides; there is no
 
 === Academic Honesty and Use of AI
 
-AI tools are not allowed for completing homework assignments unless their use is explicitly permitted by the instructor for a particular assignment. Students must complete all coursework and assessments independently unless AI-tool use is explicitly permitted. Unauthorized use of AI may constitute academic dishonesty and harm learning. Misuse includes submitting AI-generated work as one's own, using AI to cheat, or employing AI unethically. Students must obtain permission before using AI in academic work and acknowledge any permitted AI use in their submissions.
+Students must complete all coursework and assessments independently, unless AI tool use is explicitly permitted. Unauthorized use of AI may constitute academic dishonesty and harm learning. Misuse includes submitting AI-generated work as one's own, using AI to cheat, or employing AI unethically. Always obtain permission before using AI in academic work, and be sure to acknowledge any AI use in submissions.
 
 [index.html {{<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>}} Back to course homepage]
