@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Space Explorer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white p-6">
+<div id="vsx-root" class="w-full max-w-5xl mx-auto text-gray-600">
+  <style>
+    #vsx-root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#4b5563}
+    #vsx-root .vsx-heading{color:#111827;font-weight:650}
+    #vsx-root .vsx-num{width:68px;height:40px;border:1px solid #d1d5db;border-radius:8px;background:#fff;color:#374151;text-align:center;font-size:16px;outline:none}
+    #vsx-root .vsx-num:focus{border-color:#6b7280;box-shadow:0 0 0 2px rgba(107,114,128,.12)}
+    #vsx-root .vsx-num:read-only{background:#f9fafb;color:#6b7280}
+    #vsx-root .vsx-small{width:58px;height:36px;font-size:14px}
+    #vsx-root input[type=range]{width:100%;accent-color:#4f46e5}
+    #vsx-root input[type=checkbox],#vsx-root input[type=radio]{accent-color:#4f46e5}
+    #vsx-root button{border:1px solid #d1d5db;background:#fff;color:#4b5563;border-radius:8px;padding:7px 10px;font-size:12px;min-height:36px}
+    #vsx-root button:hover{border-color:#9ca3af;color:#111827}
+    #vsx-root button[data-active="true"]{border-color:#4f46e5;background:#eef2ff;color:#3730a3}
+    #vsx-root svg{width:100%;height:auto;background:#fff;border:1px solid #d1d5db;border-radius:10px;display:block}
+    #vsx-root .vsx-stat{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:9px}
+    #vsx-root .vsx-eq{background:#f8fafc;border-left:3px solid #cbd5e1;padding:9px 11px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#475569}
+    @media(max-width:640px){#vsx-root .vsx-num{width:60px}}
+  </style>
+
+  <div class="mb-5">
+    <div class="vsx-heading text-lg">Explore a 2D linear transformation</div>
+    <div class="text-sm text-gray-500 mt-1">Change A and u, then watch the column space, Au, rank, and null space update.</div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-[280px_minmax(0,1fr)] gap-6 items-start">
+    <div class="space-y-6 min-w-0">
+      <section>
+        <div class="vsx-heading text-sm mb-3">Matrix A</div>
+        <div class="flex items-center gap-2" aria-label="2 by 2 matrix A">
+          <span class="text-5xl font-light text-gray-400">[</span>
+          <div class="grid grid-cols-2 gap-2">
+            <input id="vsx-a11" class="vsx-num" type="number" step="0.1" value="1" aria-label="A row 1 column 1">
+            <input id="vsx-a12" class="vsx-num" type="number" step="0.1" value="2" aria-label="A row 1 column 2">
+            <input id="vsx-a21" class="vsx-num" type="number" step="0.1" value="2" aria-label="A row 2 column 1">
+            <input id="vsx-a22" class="vsx-num" type="number" step="0.1" value="4" aria-label="A row 2 column 2">
+          </div>
+          <span class="text-5xl font-light text-gray-400">]</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3">
+          <button type="button" data-vsx-preset="identity">Identity</button>
+          <button type="button" data-vsx-preset="rank1" data-active="true">Rank 1</button>
+          <button type="button" data-vsx-preset="rotation">Rotation</button>
+          <button type="button" data-vsx-preset="random">Random</button>
+          <button type="button" data-vsx-preset="zero">Zero</button>
+        </div>
+        <label class="flex items-center gap-2 mt-3 text-sm"><input id="vsx-rand-singular" type="checkbox" checked> Random sometimes singular</label>
+        <div id="vsx-rot-panel" class="mt-4 hidden">
+          <div class="flex justify-between items-center mb-1"><label for="vsx-angle" class="vsx-heading text-xs">Rotation angle θ</label><span id="vsx-angle-label" class="text-xs text-gray-500">35°</span></div>
+          <input id="vsx-angle" type="range" min="0" max="360" step="1" value="35">
+          <div class="text-xs text-gray-500 mt-2">A = [cosθ −sinθ; sinθ cosθ]</div>
+        </div>
+        <div class="grid grid-cols-2 gap-2 mt-3">
+          <div class="vsx-stat"><div class="text-[10px] uppercase tracking-wide text-gray-400">rank(A)</div><div id="vsx-rank" class="font-semibold text-gray-700">1</div></div>
+          <div class="vsx-stat"><div class="text-[10px] uppercase tracking-wide text-gray-400">det(A)</div><div id="vsx-det" class="font-semibold text-gray-700">0</div></div>
+        </div>
+      </section>
+
+      <section class="border-t border-gray-200 pt-5">
+        <div class="vsx-heading text-sm mb-3">Vector u</div>
+        <div class="space-y-3">
+          <div class="grid grid-cols-[26px_1fr_58px] gap-2 items-center">
+            <label for="vsx-u1r" class="font-medium text-gray-700">u₁</label>
+            <input id="vsx-u1r" type="range" min="-5" max="5" step="0.1" value="1">
+            <input id="vsx-u1n" class="vsx-num vsx-small" type="number" min="-20" max="20" step="0.1" value="1">
+          </div>
+          <div class="grid grid-cols-[26px_1fr_58px] gap-2 items-center">
+            <label for="vsx-u2r" class="font-medium text-gray-700">u₂</label>
+            <input id="vsx-u2r" type="range" min="-5" max="5" step="0.1" value="1">
+            <input id="vsx-u2n" class="vsx-num vsx-small" type="number" min="-20" max="20" step="0.1" value="1">
+          </div>
+        </div>
+        <label class="flex items-center gap-2 mt-4 text-sm"><input id="vsx-null" type="checkbox" checked> Display null space</label>
+        <label class="flex items-center gap-2 mt-2 text-sm"><input id="vsx-decomp" type="checkbox" checked> Show u₁a₁ + u₂a₂</label>
+        <div id="vsx-equation" class="vsx-eq mt-4">Au = [3, 6]ᵀ</div>
+        <div id="vsx-message" class="text-xs text-gray-500 mt-2 min-h-[18px]" aria-live="polite"></div>
+      </section>
+    </div>
+
+    <div class="min-w-0">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section class="min-w-0">
+          <div class="flex justify-between items-baseline gap-2 mb-2"><div class="vsx-heading text-sm">Input space</div><div class="text-xs text-gray-400">u ∈ ℝ²</div></div>
+          <svg id="vsx-input" viewBox="0 0 420 420" role="img" aria-label="Input space showing u and the null space"></svg>
+          <div class="flex flex-wrap gap-4 mt-2 text-xs text-gray-500">
+            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>u</span>
+            <span class="inline-flex items-center gap-1.5"><span class="w-5 border-t-2 border-dashed border-cyan-600"></span>Null(A)</span>
+          </div>
+        </section>
+        <section class="min-w-0">
+          <div class="flex justify-between items-baseline gap-2 mb-2"><div class="vsx-heading text-sm">Output space</div><div class="text-xs text-gray-400">Au ∈ Col(A)</div></div>
+          <svg id="vsx-output" viewBox="0 0 420 420" role="img" aria-label="Output space showing the column space and Au"></svg>
+          <div class="flex flex-wrap gap-4 mt-2 text-xs text-gray-500">
+            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>a₁</span>
+            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-cyan-600"></span>a₂</span>
+            <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-teal-700"></span>Au</span>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-200 mt-5 pt-4">
+        <div><div class="vsx-heading text-xs">Column space</div><p id="vsx-coltext" class="text-xs text-gray-500 mt-1">The columns span a line.</p></div>
+        <div><div class="vsx-heading text-xs">Transformation</div><p id="vsx-trtext" class="text-xs text-gray-500 mt-1">Au = u₁a₁ + u₂a₂.</p></div>
+        <div><div class="vsx-heading text-xs">Null space</div><p id="vsx-nulltext" class="text-xs text-gray-500 mt-1">A nonzero direction maps to zero.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const root=document.getElementById('vsx-root'); if(!root||root.dataset.ready==='1')return; root.dataset.ready='1';
+    const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', EPS=1e-8;
+    const E={a11:$('vsx-a11'),a12:$('vsx-a12'),a21:$('vsx-a21'),a22:$('vsx-a22'),u1r:$('vsx-u1r'),u2r:$('vsx-u2r'),u1n:$('vsx-u1n'),u2n:$('vsx-u2n'),nul:$('vsx-null'),dec:$('vsx-decomp'),angle:$('vsx-angle'),angleLabel:$('vsx-angle-label'),rotPanel:$('vsx-rot-panel'),randSing:$('vsx-rand-singular')};
+    let mode='manual';
+    const C={grid:'#e5e7eb',axis:'#9ca3af',text:'#6b7280',blue:'#2563eb',cyan:'#0891b2',indigo:'#4f46e5',teal:'#0f766e',shade:'#eff6ff'};
+    const num=(v,d=0)=>{const x=Number(v);return Number.isFinite(x)?Math.max(-100,Math.min(100,x)):d};
+    const fmt=v=>{if(Math.abs(v)<1e-10)v=0;return (Math.abs(v)>=100?v.toFixed(1):v.toFixed(2)).replace(/\.00$/,'').replace(/(\.\d)0$/,'$1')};
+    const S=(tag,a={})=>{const n=document.createElementNS(NS,tag);Object.entries(a).forEach(([k,v])=>n.setAttribute(k,String(v)));return n};
+    const clear=n=>{while(n.firstChild)n.removeChild(n.firstChild)};
+    const A=()=>[[num(E.a11.value),num(E.a12.value)],[num(E.a21.value),num(E.a22.value)]];
+    const u=()=>[num(E.u1n.value),num(E.u2n.value)];
+    const mul=(M,v)=>[M[0][0]*v[0]+M[0][1]*v[1],M[1][0]*v[0]+M[1][1]*v[1]];
+    const det=M=>M[0][0]*M[1][1]-M[0][1]*M[1][0], norm=v=>Math.hypot(v[0],v[1]);
+    function rank(M){const d=det(M),s=Math.max(1,...M.flat().map(Math.abs));if(Math.abs(d)>EPS*s*s)return 2;return(norm([M[0][0],M[1][0]])>EPS*s||norm([M[0][1],M[1][1]])>EPS*s)?1:0}
+    function nullDir(M){const row=Math.hypot(M[0][0],M[0][1])>=Math.hypot(M[1][0],M[1][1])?M[0]:M[1],d=[-row[1],row[0]],m=norm(d);return m<EPS?[1,0]:[d[0]/m,d[1]/m]}
+    function setActive(name){root.querySelectorAll('[data-vsx-preset]').forEach(b=>b.dataset.active=String(b.dataset.vsxPreset===name));}
+    function setMatrix(M){E.a11.value=fmt(M[0][0]);E.a12.value=fmt(M[0][1]);E.a21.value=fmt(M[1][0]);E.a22.value=fmt(M[1][1]);}
+    function setMode(next){mode=next;const locked=mode==='rotation';[E.a11,E.a12,E.a21,E.a22].forEach(x=>x.readOnly=locked);E.rotPanel.classList.toggle('hidden',!locked);}
+    function applyRotation(){const th=num(E.angle.value)*Math.PI/180,c=Math.cos(th),s=Math.sin(th);E.angleLabel.textContent=String(Math.round(num(E.angle.value)))+'°';setMatrix([[c,-s],[s,c]]);}
+    function randomMatrix(){const r=()=>Math.round((Math.random()*6-3)*10)/10;let M;if(E.randSing.checked&&Math.random()<0.25){const col=[r(),r()],k=r();M=[[col[0],k*col[0]],[col[1],k*col[1]]];}else{let tries=0;do{M=[[r(),r()],[r(),r()]];tries++;}while(Math.abs(det(M))<0.15&&tries<20);}setMatrix(M);}
+    function base(plot,extent,shade){clear(plot);if(shade)plot.appendChild(S('rect',{x:0,y:0,width:420,height:420,fill:C.shade,opacity:.72,rx:10}));const x=q=>210+q/extent*180,y=q=>210-q/extent*180;for(let k=-Math.floor(extent);k<=Math.floor(extent);k++){if(!k)continue;plot.appendChild(S('line',{x1:x(k),y1:30,x2:x(k),y2:390,stroke:C.grid}));plot.appendChild(S('line',{x1:30,y1:y(k),x2:390,y2:y(k),stroke:C.grid}))}plot.appendChild(S('line',{x1:30,y1:210,x2:390,y2:210,stroke:C.axis,'stroke-width':1.2}));plot.appendChild(S('line',{x1:210,y1:30,x2:210,y2:390,stroke:C.axis,'stroke-width':1.2}));let t=S('text',{x:390,y:202,'text-anchor':'end','font-size':11,fill:C.text});t.textContent='x₁';plot.appendChild(t);t=S('text',{x:219,y:42,'font-size':11,fill:C.text});t.textContent='x₂';plot.appendChild(t);return{x,y}}
+    function arrow(plot,m,v,color,label,w=2.6){const id='v'+Math.random().toString(36).slice(2),defs=S('defs'),mk=S('marker',{id,markerWidth:8,markerHeight:8,refX:7,refY:3.5,orient:'auto',markerUnits:'strokeWidth'});mk.appendChild(S('path',{d:'M0,0 L7,3.5 L0,7 z',fill:color}));defs.appendChild(mk);plot.appendChild(defs);plot.appendChild(S('line',{x1:m.x(0),y1:m.y(0),x2:m.x(v[0]),y2:m.y(v[1]),stroke:color,'stroke-width':w,'stroke-linecap':'round','marker-end':'url(#'+id+')'}));if(label){const t=S('text',{x:m.x(v[0])+8,y:m.y(v[1])-8,'font-size':12,'font-weight':600,fill:color});t.textContent=label;plot.appendChild(t)}}
+    function seg(plot,m,p,q,color,w=2,dash='6 5'){const l=S('line',{x1:m.x(p[0]),y1:m.y(p[1]),x2:m.x(q[0]),y2:m.y(q[1]),stroke:color,'stroke-width':w,'stroke-linecap':'round'});if(dash)l.setAttribute('stroke-dasharray',dash);plot.appendChild(l)}
+    function inputPlot(M,v,r){const p=$('vsx-input'),ext=Math.max(5,Math.ceil(Math.max(Math.abs(v[0]),Math.abs(v[1]))*1.25)),m=base(p,ext,false);if(E.nul.checked){if(r===1){const d=nullDir(M),s=ext*1.45;seg(p,m,[-d[0]*s,-d[1]*s],[d[0]*s,d[1]*s],C.cyan,3);const t=S('text',{x:m.x(d[0]*ext*.78)+7,y:m.y(d[1]*ext*.78)-7,'font-size':11,fill:C.cyan});t.textContent='Null(A)';p.appendChild(t)}else if(r===0){p.insertBefore(S('rect',{x:30,y:30,width:360,height:360,fill:'#ecfeff',opacity:.65}),p.firstChild);const t=S('text',{x:42,y:52,'font-size':11,fill:C.cyan});t.textContent='Null(A) = ℝ²';p.appendChild(t)}else{const t=S('text',{x:42,y:52,'font-size':11,fill:C.text});t.textContent='Null(A) = {0}';p.appendChild(t)}}arrow(p,m,v,C.indigo,'u',3);p.appendChild(S('circle',{cx:m.x(0),cy:m.y(0),r:3,fill:'#6b7280'}))}
+    function outputPlot(M,v,w,r){const p=$('vsx-output'),a1=[M[0][0],M[1][0]],a2=[M[0][1],M[1][1]],p1=[v[0]*a1[0],v[0]*a1[1]],ext=Math.max(5,Math.ceil(Math.max(norm(a1),norm(a2),norm(w),norm(p1))*1.25)),m=base(p,ext,r===2);if(r===1){const b=norm(a1)>EPS?a1:a2,n=norm(b),d=[b[0]/n,b[1]/n],s=ext*1.45;seg(p,m,[-d[0]*s,-d[1]*s],[d[0]*s,d[1]*s],'#93c5fd',5,'');const t=S('text',{x:42,y:52,'font-size':11,fill:C.blue});t.textContent='Col(A): line';p.appendChild(t)}else if(r===2){const t=S('text',{x:42,y:52,'font-size':11,fill:C.blue});t.textContent='Col(A) = ℝ²';p.appendChild(t)}else{p.appendChild(S('circle',{cx:m.x(0),cy:m.y(0),r:7,fill:'#bfdbfe'}));const t=S('text',{x:42,y:52,'font-size':11,fill:C.blue});t.textContent='Col(A) = {0}';p.appendChild(t)}arrow(p,m,a1,C.blue,'a₁',2.3);arrow(p,m,a2,C.cyan,'a₂',2.3);if(E.dec.checked){seg(p,m,[0,0],p1,C.blue,2,'5 4');seg(p,m,p1,w,C.cyan,2,'5 4')}arrow(p,m,w,C.teal,'Au',3.4);p.appendChild(S('circle',{cx:m.x(0),cy:m.y(0),r:3,fill:'#6b7280'}))}
+    function update(){if(mode==='rotation')applyRotation();const M=A(),v=u(),w=mul(M,v),d=det(M),r=rank(M);$('vsx-rank').textContent=r;$('vsx-det').textContent=fmt(d);$('vsx-equation').textContent='Au = ['+fmt(w[0])+', '+fmt(w[1])+']ᵀ = '+fmt(v[0])+'a₁ + '+fmt(v[1])+'a₂';$('vsx-coltext').textContent=r===2?'Rank 2: the columns are independent and span all of ℝ².':r===1?'Rank 1: the columns are dependent and span a line through the origin.':'Rank 0: the column space contains only the origin.';$('vsx-trtext').textContent='u = ['+fmt(v[0])+', '+fmt(v[1])+']ᵀ maps to Au = ['+fmt(w[0])+', '+fmt(w[1])+']ᵀ.';$('vsx-nulltext').textContent=r===2?'Full rank: Null(A) = {0}.':r===1?'One nonzero input direction is collapsed to the zero vector.':'Every input maps to zero, so Null(A) = ℝ².';$('vsx-message').textContent=r<2&&norm(w)<1e-7&&norm(v)>1e-7?'This nonzero u lies in the null space: Au = 0.':mode==='rotation'?'Rotation mode: matrix entries are computed from θ.':'';inputPlot(M,v,r);outputPlot(M,v,w,r)}
+    E.u1r.addEventListener('input',()=>{E.u1n.value=E.u1r.value;update()});E.u2r.addEventListener('input',()=>{E.u2n.value=E.u2r.value;update()});
+    E.u1n.addEventListener('input',()=>{E.u1r.value=Math.max(-5,Math.min(5,num(E.u1n.value)));update()});E.u2n.addEventListener('input',()=>{E.u2r.value=Math.max(-5,Math.min(5,num(E.u2n.value)));update()});
+    [E.a11,E.a12,E.a21,E.a22,E.nul,E.dec,E.randSing].forEach(x=>x.addEventListener('input',()=>{if(mode!=='rotation')setActive('');update()}));
+    E.angle.addEventListener('input',()=>{setMode('rotation');setActive('rotation');update()});
+    const presets={identity:[[1,0],[0,1]],rank1:[[1,2],[2,4]],zero:[[0,0],[0,0]]};
+    root.querySelectorAll('[data-vsx-preset]').forEach(b=>b.addEventListener('click',()=>{const p=b.dataset.vsxPreset;if(p==='rotation'){setMode('rotation');setActive('rotation');update();return}setMode('manual');setActive(p);if(p==='random'){randomMatrix()}else{setMatrix(presets[p])}update()}));
+    setMode('manual');update();
+  })();
+  </script>
+</div>
+</body>
+</html>
