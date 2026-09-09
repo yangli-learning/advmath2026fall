@@ -1,4 +1,5 @@
 *.html
+!lecture1_vector_space_explorer.html
 *~
 *.DS_Store
 !PA*.html

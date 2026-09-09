@@ -73,7 +73,7 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <th style="width:15%">Materials</th>
         <th style="width:15%">Homework</th>
     </tr>
-    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td></td><td></td></tr>
+    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td><a href="AIE6001%5FS1%5FLecture0.pdf" target="blank">Lecture 0</a><br><a href="AIE6001%5FS1%5FLecture1.pdf" target="blank">Lecture 1</a><br><a href="lecture1%5Fvector%5Fspace%5Fexplorer.html" target="blank">Vector Space Explorer</a></td><td></td></tr>
     <tr><td>9/14/2026</td><td><b>Matrix decomposition</b><ul><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td></td><td></td></tr>
     <tr><td>9/21/2026</td><td><b>Vector space and norm</b><ul><li>Basis, orthogonality, and vector norms</li><li>Applications in embeddings</li></ul></td><td></td><td></td></tr>
     <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td></td><td></td></tr>
