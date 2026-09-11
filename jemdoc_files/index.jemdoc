@@ -1,4 +1,4 @@
-# jemdoc: menu{MENU}{index.html},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css},addjs{http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min},addjs{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min}
+﻿# jemdoc: menu{MENU}{index.html},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css},addcss{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css},addjs{http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min},addjs{https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min}
 
 # == AIE6001(Fall 2026): Advanced Math for AI
 
@@ -12,7 +12,9 @@ For complete course policies, learning outcomes, grading, and reference texts, s
 
 ~~~
 {Announcement}
-- *Reminder*: The first class will be held on Monday, September 7th.
+- *Office hours*: Instructor Yang Li holds regular office hours on *Thursday, 10:30-12:00, TX B117*. *For next week only* (the week of September 14), the office hour will be *Friday, 9:00-11:00, TX B117*.
+- *TA office hours*: Xiaobo Liu: Wednesday, 13:30-15:30, Letian Building 103; Ao Wang: Tuesday, 14:00-16:00, Chengdao 202.
+- *Homework*: Assignment 1 is released. Due Sunday, September 20th. Download from the schedule below.
 ~~~
 
 
@@ -41,7 +43,8 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <p>
             <b>Yang Li</b></br>
             Instructor</br>
-            yangl@cuhk.edu.cn
+            yangl@cuhk.edu.cn</br>
+            Office hour: Thu 10:30-12:00, TX B117
         </p>
     </div>
     <div id="member">
@@ -49,7 +52,8 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <p>
             <b>Xiaobo Liu</b></br>
             TA</br>
-            <a href="mailto:xiaoboliu@link.cuhk.edu.cn">xiaoboliu@link.cuhk.edu.cn</a>
+            <a href="mailto:xiaoboliu@link.cuhk.edu.cn">xiaoboliu@link.cuhk.edu.cn</a></br>
+            Office hour: Wed 13:30-15:30, Letian 103
         </p>
     </div>
     <div id="member">
@@ -57,7 +61,8 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <p>
             <b>Ao Wang</b></br>
             TA</br>
-            <a href="mailto:aowang2@link.cuhk.edu.cn">aowang2@link.cuhk.edu.cn</a>
+            <a href="mailto:aowang2@link.cuhk.edu.cn">aowang2@link.cuhk.edu.cn</a></br>
+            Office hour: Tue 14:00-16:00, Chengdao 202
         </p>
     </div>
 </div>
@@ -73,7 +78,7 @@ Students should be comfortable with introductory calculus, linear algebra, and p
         <th style="width:15%">Materials</th>
         <th style="width:15%">Homework</th>
     </tr>
-    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td><a href="AIE6001%5FS1%5FLecture0.pdf" target="blank">Lecture 0</a><br><a href="AIE6001%5FS1%5FLecture1.pdf" target="blank">Lecture 1</a><br><a href="lecture1%5Fvector%5Fspace%5Fexplorer.html" target="blank">Vector Space Explorer</a></td><td></td></tr>
+    <tr><td>9/7/2026</td><td><b>Matrix operations</b><ul><li>Matrix multiplication, inverses, and determinants</li><li>Role of matrix operations in neural networks</li></ul></td><td><a href="AIE6001%5FS1%5FLecture0.pdf" target="blank">Lecture 0</a><br><a href="AIE6001%5FS1%5FLecture1.pdf" target="blank">Lecture 1</a><br><a href="lecture1%5Fvector%5Fspace%5Fexplorer.html" target="blank">Vector Space Explorer</a></td><td><a href="Assignment1.pdf" target="blank">HW1</a><br>Due 9/20</td></tr>
     <tr><td>9/14/2026</td><td><b>Matrix decomposition</b><ul><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td></td><td></td></tr>
     <tr><td>9/21/2026</td><td><b>Vector space and norm</b><ul><li>Basis, orthogonality, and vector norms</li><li>Applications in embeddings</li></ul></td><td></td><td></td></tr>
     <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td></td><td></td></tr>
