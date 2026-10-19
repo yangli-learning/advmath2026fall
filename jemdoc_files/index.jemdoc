@@ -15,6 +15,7 @@ For complete course policies, learning outcomes, grading, and reference texts, s
 - *Office hours*: Instructor Yang Li holds regular office hours on *Thursday, 10:30-12:00, TX B117*. *For next week only* (the week of September 14), the office hour will be *Friday, 9:00-11:00, TX B117*.
 - *TA office hours*: Xiaobo Liu: Wednesday, 13:30-15:30, Letian Building 103; Ao Wang: Tuesday, 14:00-16:00, Chengdao 202.
 - *Homework*: Assignment 2 is released. Due Sunday, October 18th. Download from the schedule below.
+- *Schedule update*: Because of the National Day holiday, there was no class on October 5. All lectures from October 5 onward are postponed by one week, except the midterm exam which remains on October 26.
 ~~~
 
 
@@ -82,16 +83,17 @@ Students should be comfortable with introductory calculus, linear algebra, and p
     <tr><td>9/14/2026</td><td><b>Back-propagation and Vector Space</b><ul><li>Gradient of vectors, chain rule, back-propagation</li><li>Vector space and basis</li></ul></td><td><a href="Lecture2.pdf" target="blank">Lecture 2</a><br><a href="Lecture02%5Fnotes.pdf" target="blank">Lecture 2 Notes</a><br><a href="backpropagation.pdf" target="blank">Back-propagation</a></td><td></td></tr>
     <tr><td>9/21/2026</td><td><b>Matrix Norm and Matrix Decomposition</b><ul><li>Vector and matrix norms</li><li>QR factorization, eigenvalue decomposition, and SVD decomposition</li><li>Applications in dimensionality reduction</li></ul></td><td><a href="Lecture3.pdf" target="blank">Lecture 3</a><br><a href="Lecture03%5Fnotes.pdf" target="blank">Lecture 3 Notes</a></td><td><a href="Assignment2.pdf" target="blank">HW2</a><br>Due 10/18</td></tr>
     <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td><a href="Lecture4.pdf" target="blank">Lecture 4</a><br><a href="Lecture4%5Fannotated%5Fslides.pdf" target="blank">Lecture 4 Annotated Slides</a><br><a href="Lecture04%5Fnotes.pdf" target="blank">Lecture 4 Notes</a></td><td></td></tr>
-    <tr><td>10/5/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td><a href="Lecture5.pdf" target="blank">Lecture 5</a></td><td></td></tr>
-    <tr><td>10/12/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td><a href="Lecture6.pdf" target="blank">Lecture 6</a></td><td></td></tr>
-    <tr><td>10/19/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td></td></tr>
+    <tr><td>10/5/2026</td><td><b>National Day Holiday</b> (No Class)</td><td></td><td></td></tr>
+    <tr><td>10/12/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td><a href="Lecture5.pdf" target="blank">Lecture 5</a></td><td></td></tr>
+    <tr><td>10/19/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td><a href="Lecture6.pdf" target="blank">Lecture 6</a></td><td></td></tr>
     <tr><td>10/26/2026</td><td><b>Midterm Exam</b></td><td></td><td></td></tr>
-    <tr><td>11/2/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td></td></tr>
-    <tr><td>11/9/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td></td></tr>
-    <tr><td>11/16/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td></td></tr>
-    <tr><td>11/23/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td></td></tr>
-    <tr><td>11/30/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td></td></tr>
-    <tr><td>12/7/2026</td><td><b>Cross-entropy</b><ul><li>Cross-entropy between probability distributions</li><li>Loss functions for classification tasks</li></ul></td><td></td><td></td></tr>
-    <tr><td>12/14/2026</td><td><b>Final Exam</b></td><td></td><td></td></tr>
+    <tr><td>11/2/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/9/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/16/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/23/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/30/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td></td></tr>
+    <tr><td>12/7/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td></td></tr>
+    <tr><td>12/14/2026</td><td><b>Cross-entropy</b><ul><li>Cross-entropy between probability distributions</li><li>Loss functions for classification tasks</li></ul></td><td></td><td></td></tr>
+    <tr><td>12/21/2026</td><td><b>Final Exam</b></td><td></td><td></td></tr>
 </table>
 }}
