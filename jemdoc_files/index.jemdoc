@@ -20,7 +20,7 @@ For complete course policies, learning outcomes, grading, and reference texts, s
 -- Please come prepared and arrive on time. Good luck with your preparation!
 - *Office hours*: Instructor Yang Li holds regular office hours on *Thursday, 10:30-12:00, TX B117*. *For next week only* (the week of September 14), the office hour will be *Friday, 9:00-11:00, TX B117*.
 - *TA office hours*: Xiaobo Liu: Wednesday, 13:30-15:30, Letian Building 103; Ao Wang: Tuesday, 14:00-16:00, Chengdao 202.
-- *Homework*: Assignment 2 is released. Due Sunday, October 18th. Download from the schedule below.
+- *Homework*: Assignment 3 is released. Due Thursday, October 29th. Download from the schedule below.
 - *Schedule update*: Because of the National Day holiday, there was no class on October 5. All lectures from October 5 onward are postponed by one week. The midterm exam is on November 2.
 ~~~
 
@@ -91,7 +91,7 @@ Students should be comfortable with introductory calculus, linear algebra, and p
     <tr><td>9/28/2026</td><td><b>Basics of tensors</b><ul><li>Multidimensional arrays and tensor operations</li><li>Applications in deep learning</li></ul></td><td><a href="Lecture4.pdf" target="blank">Lecture 4</a><br><a href="Lecture4%5Fannotated%5Fslides.pdf" target="blank">Lecture 4 Annotated Slides</a><br><a href="Lecture04%5Fnotes.pdf" target="blank">Lecture 4 Notes</a></td><td></td></tr>
     <tr><td>10/5/2026</td><td><b>National Day Holiday</b> (No Class)</td><td></td><td></td></tr>
     <tr><td>10/12/2026</td><td><b>Probability distributions and statistical inference</b><ul><li>Common probability distributions</li><li>Statistical inference and applications in modeling data</li></ul></td><td><a href="Lecture5.pdf" target="blank">Lecture 5</a></td><td></td></tr>
-    <tr><td>10/19/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td><a href="Lecture6.pdf" target="blank">Lecture 6</a><br><a href="Lecture6%5Fannotated%5Fslides.pdf" target="blank">Lecture 6 Annotated Slides</a><br><a href="Lecture06%5Fnotes.pdf" target="blank">Lecture 6 Notes</a></td><td></td></tr>
+    <tr><td>10/19/2026</td><td><b>Markov chains</b><ul><li>Transition matrices and stationary distributions</li><li>Applications in PageRank</li></ul></td><td><a href="Lecture6.pdf" target="blank">Lecture 6</a><br><a href="Lecture6%5Fannotated%5Fslides.pdf" target="blank">Lecture 6 Annotated Slides</a><br><a href="Lecture06%5Fnotes.pdf" target="blank">Lecture 6 Notes</a></td><td><a href="Assignment3.pdf" target="blank">HW3</a><br>Due 10/29</td></tr>
     <tr><td>10/26/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td></td><td></td></tr>
     <tr><td>11/2/2026</td><td><b>Midterm Exam</b></td><td></td><td></td></tr>
     <tr><td>11/9/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td></td><td></td></tr>
