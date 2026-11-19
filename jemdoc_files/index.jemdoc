@@ -12,16 +12,10 @@ For complete course policies, learning outcomes, grading, and reference texts, s
 
 ~~~
 {Announcement}
-- *Midterm exam*: This is a friendly reminder that our in-class exam will take place on *November 2*. Please keep the following details in mind:
--- *Duration:* 1.5 hours (90 minutes)
--- *Format:* Closed-book
--- *Notes:* One A4-sized, double-sided note sheet is allowed
--- *Calculator:* Not required
--- Please come prepared and arrive on time. Good luck with your preparation!
+- *Midterm exam paper review*: Students who wish to argue the grading of their midterm exam paper may come to *Chengdao 202* from *November 16 to 20, 15:00-17:00*.
 - *Office hours*: Instructor Yang Li holds regular office hours on *Thursday, 10:30-12:00, TX B117*. *For next week only* (the week of September 14), the office hour will be *Friday, 9:00-11:00, TX B117*.
 - *TA office hours*: Xiaobo Liu: Wednesday, 13:30-15:30, Letian Building 103; Ao Wang: Tuesday, 14:00-16:00, Chengdao 202.
-- *Homework*: Assignment 3 is released. Due Thursday, October 29th. Download from the schedule below.
-- *Schedule update*: Because of the National Day holiday, there was no class on October 5. All lectures from October 5 onward are postponed by one week. The midterm exam is on November 2.
+- *Homework*: Assignment 4 is released. Due December 5th. Download from the schedule below.
 ~~~
 
 
@@ -95,7 +89,7 @@ Students should be comfortable with introductory calculus, linear algebra, and p
     <tr><td>10/26/2026</td><td><b>Stochastic processes</b><ul><li>Discrete and continuous-time Markov chains</li><li>Applications in diffusion models</li></ul></td><td><a href="Lecture07%5Fnotes.pdf" target="blank">Lecture 7 Notes</a><br><a href="AIE6001%5FReviewNotes.pdf" target="blank">Review Notes</a><br><a href="practice%5Fmidterm.pdf" target="blank">Practice Midterm</a></td><td></td></tr>
     <tr><td>11/2/2026</td><td><b>Midterm Exam</b></td><td></td><td></td></tr>
     <tr><td>11/9/2026</td><td><b>Gradient methods</b><ul><li>Stochastic gradient methods</li><li>Insights for training neural networks</li></ul></td><td><a href="Lecture8.pdf" target="blank">Lecture 8</a><br><a href="Lecture8%5Fwith%5Fnotes.pdf" target="blank">Lecture 8 With Notes</a></td><td></td></tr>
-    <tr><td>11/16/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td></td></tr>
+    <tr><td>11/16/2026</td><td><b>Constrained optimization</b><ul><li>KKT conditions and duality</li><li>Applications in support vector machines</li></ul></td><td></td><td><a href="Assignment4.pdf" target="blank">HW4</a><br>Due 12/05</td></tr>
     <tr><td>11/23/2026</td><td><b>Approximation algorithms</b><ul><li>Convex relaxation</li><li>Applications to non-convex machine learning problems</li></ul></td><td></td><td></td></tr>
     <tr><td>11/30/2026</td><td><b>Entropy and mutual information</b><ul><li>Measuring uncertainty with entropy</li><li>Measuring feature relevance with mutual information</li></ul></td><td></td><td></td></tr>
     <tr><td>12/7/2026</td><td><b>Comparing distributions</b><ul><li>KL divergence, Wasserstein distance, and kernel-based distances</li><li>Quantifying discrepancies between probability distributions</li></ul></td><td></td><td></td></tr>
